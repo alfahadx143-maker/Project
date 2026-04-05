@@ -18,53 +18,25 @@ h1{text-align:center;color:#c9a84c;font-size:2rem;margin-bottom:10px;}
 .stat{background:rgba(201,168,76,0.1);padding:15px 20px;border-radius:15px;text-align:center;}
 .stat-num{font-size:1.8rem;font-weight:bold;color:#c9a84c;}
 .footer{text-align:center;padding:30px;font-size:0.9rem;color:#8892b0;}
+.section-title{text-align:center;color:#c9a84c;font-size:1.5rem;margin:40px 0 20px;position:relative;}
+.section-title::before,.section-title::after{content:'';display:inline-block;width:60px;height:1px;background:#c9a84c;vertical-align:middle;margin:0 10px;opacity:0.5;}
+.poetry-card{background:rgba(15,25,45,0.8);border-radius:20px;padding:25px 25px 25px 20px;margin-bottom:15px;border:1px solid rgba(201,168,76,0.15);border-right:4px solid #c9a84c;position:relative;}
+.poetry-card .quote-icon{color:#c9a84c;font-size:2rem;opacity:0.3;position:absolute;left:15px;top:10px;}
+.poetry-text{color:#e0e0e0;line-height:2;font-size:1.05rem;white-space:pre-line;}
+.poetry-text.verse{font-size:1.1rem;color:#f0e6cc;}
 
-/* قسم الخواطر */
-.section-title{
-  text-align:center;
-  color:#c9a84c;
-  font-size:1.5rem;
-  margin:40px 0 20px;
-  position:relative;
-}
-.section-title::before,
-.section-title::after{
-  content:'';
-  display:inline-block;
-  width:60px;
-  height:1px;
-  background:#c9a84c;
-  vertical-align:middle;
-  margin:0 10px;
-  opacity:0.5;
-}
-.poetry-card{
-  background:rgba(15,25,45,0.8);
-  border-radius:20px;
-  padding:25px 25px 25px 20px;
-  margin-bottom:15px;
-  border:1px solid rgba(201,168,76,0.15);
-  border-right:4px solid #c9a84c;
-  position:relative;
-}
-.poetry-card .quote-icon{
-  color:#c9a84c;
-  font-size:2rem;
-  opacity:0.3;
-  position:absolute;
-  left:15px;
-  top:10px;
-}
-.poetry-text{
-  color:#e0e0e0;
-  line-height:2;
-  font-size:1.05rem;
-  white-space:pre-line;
-}
-.poetry-text.verse{
-  font-size:1.1rem;
-  color:#f0e6cc;
-}
+/* ===== قسم سير المشروع ===== */
+.timeline-section{margin:50px 0;}
+.timeline{position:relative;padding-right:30px;}
+.timeline::before{content:'';position:absolute;right:0;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,#c9a84c,rgba(201,168,76,0.1));}
+.timeline-item{position:relative;margin-bottom:35px;padding-right:25px;}
+.timeline-item::before{content:'';position:absolute;right:-8px;top:6px;width:16px;height:16px;border-radius:50%;background:#c9a84c;border:3px solid #0a0f1a;box-shadow:0 0 10px rgba(201,168,76,0.5);}
+.timeline-date{color:#c9a84c;font-size:0.8rem;font-weight:bold;letter-spacing:1px;margin-bottom:6px;opacity:0.8;}
+.timeline-card{background:rgba(15,25,45,0.8);border-radius:16px;padding:18px 20px;border:1px solid rgba(201,168,76,0.15);transition:border-color 0.3s;}
+.timeline-card:hover{border-color:rgba(201,168,76,0.4);}
+.timeline-title{color:#e8c97a;font-size:1rem;font-weight:bold;margin-bottom:8px;}
+.timeline-desc{color:#a0b0c8;font-size:0.9rem;line-height:1.8;}
+.timeline-tag{display:inline-block;background:rgba(201,168,76,0.15);color:#c9a84c;font-size:0.7rem;padding:2px 10px;border-radius:20px;margin-top:10px;border:1px solid rgba(201,168,76,0.3);}
 </style>
 </head>
 <body>
@@ -79,6 +51,80 @@ h1{text-align:center;color:#c9a84c;font-size:2rem;margin-bottom:10px;}
     <div class="stat"><div class="stat-num">٦٦</div><div>صحابي</div></div>
     <div class="stat"><div class="stat-num">١٢</div><div>غزوة</div></div>
   </div>
+
+  <!-- ===== سير المشروع ===== -->
+  <div class="section-title">✦ سير المشروع ✦</div>
+  <div class="timeline-section">
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-date">البداية</div>
+        <div class="timeline-card">
+          <div class="timeline-title">🌱 الفكرة</div>
+          <div class="timeline-desc">بدأت الفكرة من رغبة شخصية في تجميع محتوى إسلامي متكامل في مكان واحد. القرآن الكريم، الأذكار، الصحابة، والرقية — كلها في صفحة واحدة سهلة وسريعة.</div>
+          <span class="timeline-tag">الإلهام</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">المرحلة الأولى</div>
+        <div class="timeline-card">
+          <div class="timeline-title">📖 بناء قارئ القرآن</div>
+          <div class="timeline-desc">أول خطوة كانت ربط API القرآن الكريم وعرض الآيات بالخط العثماني. ثم أضفت التلاوة الصوتية مع خمسة قراء مختلفين.</div>
+          <span class="timeline-tag">الأساس</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">المرحلة الثانية</div>
+        <div class="timeline-card">
+          <div class="timeline-title">📿 الأذكار والرقية</div>
+          <div class="timeline-desc">إضافة أذكار الصباح والمساء والنوم وأذكار الصلاة، مع عداد تفاعلي لكل ذكر. ثم أضفت الرقية الشرعية بآياتها وأدعيتها المأثورة.</div>
+          <span class="timeline-tag">المحتوى</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">المرحلة الثالثة</div>
+        <div class="timeline-card">
+          <div class="timeline-title">🌟 الصحابة والغزوات</div>
+          <div class="timeline-desc">توثيق سير ٦٦ صحابياً مع أقوالهم وقصصهم، وتوثيق ١٢ غزوة من سيرة النبي ﷺ بأسلوب واضح وموثوق من المصادر الشرعية المعتمدة.</div>
+          <span class="timeline-tag">التوثيق</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">المرحلة الرابعة</div>
+        <div class="timeline-card">
+          <div class="timeline-title">🔍 البحث ومواقيت الصلاة</div>
+          <div class="timeline-desc">بناء محرك بحث كامل يستعرض القرآن كاملاً في ثوانٍ مع حذف الحركات للمطابقة الذكية. وإضافة مواقيت الصلاة لجميع مدن المملكة العربية السعودية.</div>
+          <span class="timeline-tag">الذكاء</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">المرحلة الخامسة</div>
+        <div class="timeline-card">
+          <div class="timeline-title">🎨 الواجهة والتصميم</div>
+          <div class="timeline-desc">صقل التصميم بالكامل — الوضع الليلي والنهاري، الألوان الذهبية، خطوط Amiri Quran للآيات، والتجاوب مع جميع أحجام الشاشات.</div>
+          <span class="timeline-tag">التجربة</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">المرحلة السادسة</div>
+        <div class="timeline-card">
+          <div class="timeline-title">🚀 الإطلاق والمراجعة</div>
+          <div class="timeline-desc">مراجعة شاملة للمحتوى بمساعدة أبو فارس فيصل القحطاني، ثم النشر على GitHub Pages تحت رابط skenaa.ink ليصل للجميع مجاناً.</div>
+          <span class="timeline-tag">الإطلاق</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- الشكر والتقدير -->
+  <div class="section-title">✦ شكر وتقدير ✦</div>
 
   <div class="thanks-card">
     <div class="name">والدي الغالي</div>
@@ -117,7 +163,7 @@ h1{text-align:center;color:#c9a84c;font-size:2rem;margin-bottom:10px;}
     <div class="message">الصديق الحقيقي هو من يكون معك في الغياب قبل الحضور. شكراً لأنك كنت موجوداً.</div>
   </div>
 
-  <!-- قسم الخواطر والأبيات -->
+  <!-- الخواطر والأبيات -->
   <div class="section-title">✦ خواطر وأبيات ✦</div>
 
   <div class="poetry-card">
